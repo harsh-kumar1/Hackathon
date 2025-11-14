@@ -4,10 +4,11 @@ const SignUp = () => {
   return (
     <div>
       SignUp
-      <form>
-        <div className="form-name-field">
-          <div class="col-2  mb-3">
-            <label for="validationDefault01">First name</label>
+
+      <form >
+        <div className="form-group col-md-6">
+          <div className="col-2  mb-3">
+            <label forHTML="validationDefault01">First name</label>
             <input
               type="text"
               class="form-control"
@@ -16,11 +17,11 @@ const SignUp = () => {
               required
             />
           </div>
-          <div class="col-2 mb-3">
-            <label for="validationDefault02">Last name</label>
+          <div className="col-2 mb-3">
+            <label forHTML="validationDefault02">Last name</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="validationDefault02"
               placeholder="Last name"
               required
@@ -61,26 +62,26 @@ const SignUp = () => {
               required
             />
           </div>
-         <div className="col-6">
-             <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-            />
+          <div className="col-6">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Confirm Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-            />
-          </div>
-         </div>
         </div>
         <div class="form-group col-6">
           <div class="form-check"></div>

@@ -1,5 +1,8 @@
 import './Login.css'
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
+import { login } from '../../services/users'
+
 
 function Login() {
     // add the state members for inputs
@@ -14,6 +17,8 @@ function Login() {
 
     // click event handler of Login button
     const onLogin = async () => {
+        // console.log("adsfasdf")
+
         if (email.length == 0) {
             toast.warning('please enter email')
         } else if (password.length == 0) {
@@ -29,14 +34,15 @@ function Login() {
                 // localStorage.setItem('lastName', response['data']['lastName'])
 
                 // set the logged in user information
-                setUser({
-                    firstName: response['data']['firstName'],
-                    lastName: response['data']['lastName'],
-                })
+                // setUser({
+                //     firstName: response['data']['firstName'],
+                //     lastName: response['data']['lastName'],
+                // })
 
                 // navigate to the PropertyListing page
-                navigate('/home/properties')
+                // navigate('/home/properties')
             } else {
+                // console.log("error ")
                 toast.error(response['error'])
             }
         }
